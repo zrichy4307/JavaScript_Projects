@@ -19,10 +19,6 @@ function modulus() {
 }
 
 
-var x=5;
-x++;
-document.write(x);
-
 
 
 window.alert(Math.random()*100);
