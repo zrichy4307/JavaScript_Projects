@@ -6,7 +6,11 @@
 
     <body>
         <p id="Not" onclick="not_Function()">Click Here!</p>
-        <p id="Not1" onclick="not_Function1()">If that says false this must be?</p>
+        <p id="Not1" onclick="not_Function1()">If that says false this must be?</p><br>
+        <p>You must be at least 18 years old to see this movie.</p>
+        <input id="Age" value="18" />
+        <button onmouseover="Age_Function()">Move cursor here</button>
+        <p id="Movie"></p>
         <script>
             document.write(typeof 3)
         </script><br>
@@ -33,6 +37,9 @@
             Volvo="Car"
             Horse="Animal"
             document.write(Volvo===Horse)
+        </script>
+        <script>
+            document.write(Bigger=(16>12) ? "Left number is bigger":"Right number is bigger");
         </script>
        
         

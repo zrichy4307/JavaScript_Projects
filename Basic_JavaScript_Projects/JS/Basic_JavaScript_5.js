@@ -16,6 +16,13 @@ function not_Function1() {
     document.getElementById("Not1").innerHTML = !(8>10);
 }
 
+function Age_Function() {
+    var Age, Can_watch;
+    Age=document.getElementById("Age").value;
+    Can_watch=(Age<18) ? "You are too young":"You are old enough";
+    document.getElementById("Movie").innerHTML=Can_watch + "for this movie.";
+}
+
 console.log(5+17);
 
 console.log(5>6);
