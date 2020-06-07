@@ -29,3 +29,32 @@ function Nested_Function() {
         return First_Number;
     }
 }
+
+function Vehicle (Make, Model, Year, Color) {
+    this.Vehicle_Make = Make;
+    this.Vehicle_Model = Model;
+    this.Vehicle_Year = Year;
+    this.Vehicle_Color = Color;
+}
+var Jack = new Vehicle("Dodge", "Viper", 2020, "Blue");
+var Emily = new Vehicle("Jeep", "Wrangler", 2020, "Silver");
+var Erik = new Vehicle("Ford", "F-150", 2019, "Grey");
+function myFunction() {
+    document.getElementById("Keywords_and_Constructors").innerHTML = 
+    "Erik drives a "+ Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model +
+    " manufactured in " + Erik.Vehicle_Year;
+}
+
+function Clothes (Type, Size, Color) {
+    this.Clothes_Type = Type;
+    this.Clothes_Size = Size;
+    this.Clothes_Color = Color;
+}
+var Jack = new Clothes("Jeans", "Large", "Blue");
+var Emily = new Clothes("Dress", "Small", "Yellow and Grey");
+var Erik = new Clothes("Shirt", "Large", "Grey");
+function newFunction() {
+    document.getElementById("New_and_This").innerHTML = 
+    "Erik got a "+ Erik.Clothes_Size + " Button down " + Erik.Clothes_Type +
+    " and it was " + Erik.Clothes_Color;
+}
