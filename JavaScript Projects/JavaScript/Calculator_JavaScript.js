@@ -24,6 +24,17 @@ function Input_Digit(digit) {
         Calculator.Display_Value = Display_Value === '0' ? digit: Display_Value + digit;
     }
 }
+// this section handles decimal points
+function Input_Decimal(dot) {
+    // this ensures that accidental clicking of the decimal point
+    // doesn't cause bugs in your operation
+    if (Calculator.Wait_Second_Operand === true) return;
+    if (!Calculator.Display_Value.includes(dot)) {
+        //we are saying that if the Display_Value does not contain a decimal point
+        // we want to add a decimal point
+        Calculator.Display_Value += dot;
+    }
+}
 
 // this section handles operators
 function Handle_Operator(Next_Operator) {
@@ -61,6 +72,8 @@ const Perform_Calculation = {
     '*':(First_Operand, Second_Operand) => First_Operand * Second_Operand,
 
     '+':(First_Operand, Second_Operand) => First_Operand + Second_Operand,
+
+    '-':(First_Operand, Second_Operand) => First_Operand - Second_Operand,
 
     '=':(First_Operand, Second_Operand) => Second_Operand
 };
